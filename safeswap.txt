@@ -1,0 +1,13 @@
+Fees to pay:
+1. gas Fees
+2. platform Fees
+
+Blockchain	Platform Fee
+Ethereum    1%
+vechain     5%
+BNB Chain   5%
+Polygon     5%
+3. project listing/api integration Fees
+
+might not be ideal for us ->
+too much fees + no sdk only api key

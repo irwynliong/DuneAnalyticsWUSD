@@ -1,0 +1,9 @@
+indicators
+exchange balance -> type of stablecoin assets held by the exchange
+supply -> total circulation of stablecoins, need to mirror market demand (increase in demand causes positive decoupling risk, vice versa)
+exchange flow -> movement of stablecoin in and out of exchanges, can track investors activities.
+Token decimals refer to the smallest unit to which a cryptocurrency token can be divided.
+
+
+tung tran -> technical PM
+anh -> blockchain dev

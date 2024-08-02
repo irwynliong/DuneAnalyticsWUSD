@@ -1,0 +1,28 @@
+debridge widget
+
+allow for customisation
+
+sdk playground can be used
+
+eth and polygon, waiting for bsc and sol adding liquidity
+
+pegging it to usdc instead of usdt for debridge (cheaper) less hops
+
+rockaway otc
+
+can customise which chain to use
+
+can set default token
+
+can send to another address
+
+https://assets.coingecko.com/coins/images/35358/large/WUSD%282%29.png?1715042139
+image link
+
+can customise width and height of interface
+
+customisable theme
+
+call data
+
+can customise style

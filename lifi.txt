@@ -1,0 +1,6 @@
+can configure widget:
+set default token to WUSD
+set default chain
+can do either swap or bridge
+
+got sample code for popular framework i.e react app and next.js

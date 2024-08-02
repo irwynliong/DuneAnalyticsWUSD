@@ -1,0 +1,35 @@
+actor Customers
+participant Smart Contract
+participant Liquidity Pool
+participant MultiSig Wallet
+
+Customers -> Smart Contract: request swap
+activate Smart Contract
+Smart Contract -> Liquidity Pool: request X WUSD
+activate Liquidity Pool
+Liquidity Pool -> Liquidity Pool: check WUSD balance
+activate Liquidity Pool
+Liquidity Pool --> Liquidity Pool: WUSD balance
+deactivateafter Liquidity Pool
+
+alt Enough WUSD
+Smart Contract -> Liquidity Pool: deposit X USDT
+Liquidity Pool --> Smart Contract: receive X WUSD
+Smart Contract --> Customers: receive X WUSD
+
+else Not Enough WUSD
+Liquidity Pool --> Smart Contract: signal not enough WUSD
+Smart Contract -> Smart Contract: notify()
+activate Smart Contract
+Smart Contract -> MultiSig Wallet: notify WSPN
+activate MultiSig Wallet
+MultiSig Wallet --> Liquidity Pool: Top up X WUSD
+Liquidity Pool -> Liquidity Pool: check WUSD balance
+activate Liquidity Pool
+Liquidity Pool --> Liquidity Pool: WUSD balance
+deactivateafter Liquidity Pool
+deactivateafter Smart Contract
+Smart Contract -> Liquidity Pool: deposit X USDT
+Liquidity Pool --> Smart Contract: receive X WUSD
+Smart Contract --> Customers: receive X WUSD
+end
